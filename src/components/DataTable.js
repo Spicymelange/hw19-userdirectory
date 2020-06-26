@@ -10,25 +10,23 @@ function DataTable({ headings, users, handleSort }) {
         className="table table-striped table-hover table-condensed"
       >
         <thead>
-            <tr>
-                {headings.map(({ name, width }) => {
-                    return (
-            <th
-              className="col"
-              key={name}
-              style={{width}}
-              onClick={() => handleSort(users)}
-            >
-              {name}
-              <span className="pointer"></span>
-            </th>
-            );
-             })}
+          <tr>
+            {headings.map(({ name, width }) => {
+              return (
+                <th
+                  className="col"
+                  key={name}
+                  style={{ width }}
+                  onClick={() => handleSort(name.toLowerCase())}
+                >
+                  {name}
+                  <span className="pointer"></span>
+                </th>
+              );
+            })}
           </tr>
         </thead>
-        <DataBody
-          users={users}
-        />
+        <DataBody users={users} />
       </table>
     </div>
   );

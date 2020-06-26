@@ -11,7 +11,7 @@ function SearchBox({ handleSearchChange }) {
           placeholder="Search"
           aria-label="Search"
           // ADD ONCHANGE EVENT AND ASSIGN THE CALLBACK PASSED IN TO IT
-          onChange={(event) => handleSearchChange}
+          onChange={handleSearchChange}
           // THIS CALLBACK TAKES IN EVENT AS INPUT ARGUMENT
         />
       </form>

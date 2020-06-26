@@ -7,7 +7,7 @@ function Nav({ handleSearchChange }) {
     <nav className="navbar navbar-expand navbar-light bg-light">
       <div className="navbar-collapse row" id="navbarNav">
             <SearchBox
-                onClick={() => handleSearchChange()}
+                handleSearchChange={handleSearchChange}
             />
       </div>
     </nav>
