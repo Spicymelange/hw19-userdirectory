@@ -1,20 +1,23 @@
 import React from "react";
-import Nav from "./components/Nav.js"
-import Wrapper from "./components/Wrapper.js"
-import API from "./utils/API.js"
+import Wrapper from "./components/Wrapper.js";
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+
 function App() {
   return (
-    
-      <div>
-        <Nav />
-        <Wrapper>{API.getUsers()}
-          {/* <Route exact path="/" component={About} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/discover" component={Discover} />
-          <Route exact path="/search" component={Search} /> */}
-        </Wrapper>
-      </div>
+    <div>
+      <Wrapper>
+        <Header />
+        <Main />
+      </Wrapper>
+    </div>
   );
 }
 
 export default App;
+
+//when you are ready to host
+//heroku login
+//heroku create
+//git push heroku master
+//add mlab
